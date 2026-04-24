@@ -1,20 +1,20 @@
 # CopyQ_lazy
-个人的[CopyQ](https://github.com/hluk/CopyQ)仓库，包括自定义的命令和配置。
+个人的[CopyQ](https://github.com/tabortao/CopyQ_lazy)仓库，包括自定义的命令和配置。
 
 所有命令基本上来自官方的命令示例或Issue区的评论，经过汉化和修改得到。
 
 **主窗口**
 
-![](images/main-window.png)
+![](images/main-window.webp)
 
 **简洁模式**
 
-![](images/pure-mode.png)
+![](images/pure-mode.webp)
 
 
 **右键菜单**
 
-![](images/menu.png)
+![](images/menu.webp)
 
 
 **导入通知**
@@ -63,6 +63,8 @@
 
 [暗黑主题](https://github.com/dracula/copyq) 来自 `Dracula Theme`
 
-## Star History
+## 鸣谢
 
-[![Star History Chart](https://api.star-history.com/svg?repos=GFDGIT/CopyQ_lazy&type=Date)](https://www.star-history.com/#GFDGIT/CopyQ_lazy&Date)
+[GFDGIT/CopyQ_lazy](https://github.com/GFDGIT/CopyQ_lazy) - 感谢此仓库作者
+
+
