@@ -5,6 +5,11 @@
 - 修改都使用的AI Studio，后续修改直接使用“CopyQ 命令编写助手”对话。
 - 命令编写助手的地址：<https://aistudio.google.com/prompts/12a92O0PVAGjv9sbMUZ2YBlV8oWY4vmoE>
 
+## 2026-04-27
+- feat: 添加生成网页 Markdown 链接的 CopyQ 命令和文档
+  添加新的 CopyQ 命令脚本，用于自动抓取网页标题并生成 Markdown 格式链接
+  同时添加详细的使用说明文档，包含部署指南和配置说明
+
 ## 2026-04-24
 
 - 在 README.md 中添加了感谢 [GFDGIT/CopyQ\_lazy](https://github.com/GFDGIT/CopyQ_lazy) 仓库的信息
