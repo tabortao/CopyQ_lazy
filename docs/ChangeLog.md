@@ -5,6 +5,11 @@
 - 修改都使用的AI Studio，后续修改直接使用“CopyQ 命令编写助手”对话。
 - 命令编写助手的地址：<https://aistudio.google.com/prompts/12a92O0PVAGjv9sbMUZ2YBlV8oWY4vmoE>
 
+## 2026-05-11
+
+- feat: 新增`图片转 WebP (Caesium CLT).ini`命令
+  新增基于 Caesium CLT 的图片转 WebP 工具链，集成 Python 处理脚本、CopyQ 快捷键命令及完整使用文档。支持单张/多张图片及文件夹批量转换，自动保留 EXIF 元数据与原始文件时间戳。
+
 ## 2026-04-27
 
 - feat: 添加`生成网页 Markdown 链接.ini`命令和文档
