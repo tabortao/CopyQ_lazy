@@ -5,6 +5,17 @@
 - 修改都使用的AI Studio，后续修改直接使用“CopyQ 命令编写助手”对话。
 - 命令编写助手的地址：<https://aistudio.google.com/prompts/12a92O0PVAGjv9sbMUZ2YBlV8oWY4vmoE>
 
+## 2026-06-30
+
+- fix: `全文抓取到 Obsidian.ini` — 抓取命令中对 URL 自动包裹双引号（`"url"`），避免含 `&`、`|`、`空格` 等特殊字符的网址被 cmd 错误解析导致抓取失败
+- fix: `全文抓取到 Obsidian.ini` — 解析 Python 退出码与 stdout/stderr，抓取失败时直接 popup 显示 stderr 中的错误原因（如网络超时、403、反爬、无效 HTML 等），不再笼统提示"未返回任何有效信息"
+- fix: `全文抓取到 Obsidian.ini` — 避开 INI 转义陷阱：去掉 `/[\r\n]+/` 正则字符类改用 `indexOf + substring + split('\n')` 取第一行，修复 CopyQ 加载时报 `SyntaxError: 未终止的正则表达式类`
+- fix: `全文抓取到 Obsidian.ini` — 执行命令前先 `cd /d` 到项目目录，确保 `load_dotenv()` 能找到 `.env` 文件加载 Cookie，解决小红书等需要 Cookie 的网站抓取失败（显示成功但无文件产出）
+- fix: `全文抓取到 Obsidian.ini` — 通过 `res.exit_code === 0` 判断抓取是否真正成功，失败时 popup 显示具体错误信息而非误报成功
+- fix: `全文抓取到 Obsidian.ini` — 将完整命令拼接为单字符串传给 `cmd /c`（而非多参数分开传递），修复 `&&` 和 URL 中的 `&` 被 cmd 误解析导致 URL 截断、字符丢失等问题
+- fix: `全文抓取到 Obsidian.ini` — 改用临时 .bat 批处理文件执行命令，通过 `String.fromCharCode(34)` 生成双引号，彻底绕过 INI 中 `\"` 无法正确转义为 `"` 的问题
+- fix: `全文抓取到 Obsidian.ini` — 放弃 cmd/bat 方案，改用 `uv run --directory` 直接执行 Python，自动使用项目 .venv 且设置工作目录，彻底解决 URL 中 `&` 被 cmd 误解析、INI `\"` 转义、.bat 编码等问题
+
 ## 2026-05-11
 
 - feat: 新增`图片转 WebP (Caesium CLT).ini`命令
